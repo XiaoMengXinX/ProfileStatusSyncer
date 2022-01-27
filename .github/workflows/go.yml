@@ -17,4 +17,7 @@ jobs:
         go-version: 1.17
 
     - name: Start
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        MUSIC_: ${{ secrets.MUSIC_U }}
       run: go run ./syncer.go
