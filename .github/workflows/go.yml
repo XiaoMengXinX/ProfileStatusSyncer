@@ -1,8 +1,8 @@
 name: Go
 
 on:
-  workflow_run:
-    - requested
+  schedule:
+    - cron: '0 21 * * *'
     
 jobs:
 
