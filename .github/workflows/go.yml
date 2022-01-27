@@ -20,5 +20,5 @@ jobs:
     - name: Start
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        MUSIC_: ${{ secrets.MUSIC_U }}
+        MUSIC_: ${{ secrets.Netease }}
       run: go run ./syncer.go
