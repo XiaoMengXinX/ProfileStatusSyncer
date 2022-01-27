@@ -4030,6 +4030,6 @@
 	{"emoji": "🇺🇳", "name": "flag: United Nations", "shortname": ":United_Nations:", "unicode": "1F1FA 1F1F3", "html": "&#x1F1FA;&#x1F1F3;", "category": "Flags (country-flag)", "order": ""},
 	{"emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "name": "flag: England", "shortname": ":England:", "unicode": "1F3F4 E0067 E0062 E0065 E006E E0067 E007F", "html": "&#x1F3F4;&#xE0067;&#xE0062;&#xE0065;&#xE006E;&#xE0067;&#xE007F;", "category": "Flags (subdivision-flag)", "order": ""},
 	{"emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "name": "flag: Scotland", "shortname": ":Scotland:", "unicode": "1F3F4 E0067 E0062 E0073 E0063 E0074 E007F", "html": "&#x1F3F4;&#xE0067;&#xE0062;&#xE0073;&#xE0063;&#xE0074;&#xE007F;", "category": "Flags (subdivision-flag)", "order": ""},
-	{"emoji": "\uD83C\uDFF3️\u200D⚧️", "name": "flag transgender", "shortname": ":transgender_flag:", "category": "Flags (subdivision-flag)", "order": ""},
+	{"emoji": "🏳️‍⚧️", "name": "flag transgender", "shortname": ":transgender_flag:", "category": "Flags (subdivision-flag)", "order": ""},
 	{"emoji": "🏴󠁧󠁢󠁷󠁬󠁳󠁿", "name": "Wales", "shortname": ":wales:", "unicode": "1F3F4 E0067 E0062 E0077 E006C E0073 E007F", "html": "&#x1F3F4;&#xE0067;&#xE0062;&#xE0077;&#xE006C;&#xE0073;&#xE007F;", "category": "(subdivision-flag)", "order": ""}
 ]
