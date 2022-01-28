@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/XiaoMengXinX/Music163Api-Go v0.1.20
+	github.com/rivo/uniseg v0.2.0
 	github.com/sirupsen/logrus v1.8.1
 )
 
