@@ -14,7 +14,7 @@ A tool to synchronize user profile status of GitHub and Netease CloudMusic
 1. GitHub Access Token (Generate
    from [Settings -> Developer settings -> Personal access tokens](https://github.com/settings/tokens))
 
-2. Your NeteaseCloud Music Cookie (Only needs the `MUSIC_U`) field.
+2. Your NeteaseCloud Music Cookie (Only needs the `MUSIC_U` field)
 
 The NeteaseCloud Music Cookie can be taken from your browser's cookie storage.Or you can also use
 the [QuickLogin tool](https://github.com/XiaoMengXinX/Fuck163MusicTasks/releases/tag/v2.1.1) to get it.
