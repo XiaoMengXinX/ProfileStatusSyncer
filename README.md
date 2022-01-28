@@ -34,7 +34,7 @@ the [QuickLogin tool](https://github.com/XiaoMengXinX/Fuck163MusicTasks/releases
 Then you can then run the action manually and check the output log to see if it works.
 
 The action will run automatically at 21:00 UTC time every day by default, if you want to change this setting, please
-edit `.github/workflows/go.yml` file.
+edit `.github/workflows/syncer.yml` file.
 
 #### Command Line
 
