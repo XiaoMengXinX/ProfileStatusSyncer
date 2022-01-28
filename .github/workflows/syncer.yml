@@ -1,4 +1,4 @@
-name: Go
+name: Syncer
 
 on:
   workflow_dispatch:
