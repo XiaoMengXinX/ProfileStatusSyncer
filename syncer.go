@@ -102,7 +102,7 @@ func syncGitHub2Netease(c *gh.Client, n utils.RequestData) (err error) {
 		return fmt.Errorf("GitHub status is empty ")
 
 	}
-	_, err = api.SetUserStatus(n, fmt.Sprintf("%s %s", status.Data.User.Status.Emoji, status.Data.User.Status.Message))
+	_, err = api.SetUserStatus(n, fmt.Sprintf("%s %s", gh.Emojis.Shortname2Emoji(status.Data.User.Status.Emoji), status.Data.User.Status.Message))
 	if err != nil {
 		return err
 	}
