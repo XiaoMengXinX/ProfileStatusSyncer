@@ -12,6 +12,7 @@ import (
 // GithubApiEndPoint is the base URL for the GitHub Graphql API.
 const GithubApiEndPoint = "https://api.github.com/graphql"
 
+// Client is a client for the GitHub Graphql API.
 type Client struct {
 	User
 	Token string
@@ -20,11 +21,10 @@ type Client struct {
 // NewClient create new Client
 func NewClient(token string) (c *Client, err error) {
 	c = &Client{Token: token}
-	u, err := c.ViewerLogin()
+	c.User, err = c.ViewerLogin()
 	if err != nil {
 		return c, err
 	}
-	c.User = u.Data.Viewer
 	return c, err
 }
 
@@ -45,40 +45,42 @@ func (c *Client) Request(s string) (body []byte, err error) {
 }
 
 // ViewerLogin get user login info
-func (c *Client) ViewerLogin() (data UserData, err error) {
+func (c *Client) ViewerLogin() (u User, err error) {
 	b, _ := json.Marshal(Graphql{Query: GetUserData})
 	body, err := c.Request(string(b))
 	if err != nil {
-		return data, err
+		return u, err
 	}
+	var data UserData
 	err = json.Unmarshal(body, &data)
 	if len(data.Errors) != 0 {
-		return data, fmt.Errorf(data.Errors[0].Message)
+		return u, fmt.Errorf(data.Errors[0].Message)
 	}
 	if data.Message != "" {
-		return data, fmt.Errorf(data.Message)
+		return u, fmt.Errorf(data.Message)
 	}
-	return data, err
+	return data.Data.Viewer, err
 }
 
 // GetUserStatus get user status
-func (c *Client) GetUserStatus(username string) (data StatusData, err error) {
+func (c *Client) GetUserStatus(username string) (s Status, err error) {
 	b, err := json.Marshal(Graphql{Query: fmt.Sprintf(GetUserStatusQuery, username)})
 	if err != nil {
-		return data, err
+		return s, err
 	}
 	body, err := c.Request(string(b))
 	if err != nil {
-		return data, err
+		return s, err
 	}
+	var data StatusData
 	err = json.Unmarshal(body, &data)
 	if len(data.Errors) != 0 {
-		return data, fmt.Errorf(data.Errors[0].Message)
+		return s, fmt.Errorf(data.Errors[0].Message)
 	}
-	if data.Message != "" {
-		return data, fmt.Errorf(data.Message)
+	if s.Message != "" {
+		return s, fmt.Errorf(data.Message)
 	}
-	return data, err
+	return data.Data.User.Status, err
 }
 
 // ClearUserStatus clear user status

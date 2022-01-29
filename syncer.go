@@ -16,7 +16,7 @@ import (
 
 type logFormatter struct{}
 
-// Format is a formatter for logrus
+// Format is a formatter for logs
 func (s *logFormatter) Format(entry *log.Entry) ([]byte, error) {
 	timestamp := time.Now().Local().Format("2006/01/02 15:04:05")
 	var msg string
@@ -98,11 +98,11 @@ func syncGitHub2Netease(c *gh.Client, n utils.RequestData) (err error) {
 	if err != nil {
 		return err
 	}
-	if status.Data.User.Status.Emoji == "" && status.Data.User.Status.Message == "" {
+	if status.Emoji == "" && status.Message == "" {
 		return fmt.Errorf("GitHub status is empty ")
 
 	}
-	_, err = api.SetUserStatus(n, fmt.Sprintf("%s %s", gh.Emojis.Shortname2Emoji(status.Data.User.Status.Emoji), status.Data.User.Status.Message))
+	_, err = api.SetUserStatus(n, fmt.Sprintf("%s %s", gh.Emojis.Shortname2Emoji(status.Emoji), status.Message))
 	if err != nil {
 		return err
 	}

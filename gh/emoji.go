@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 )
 
-//go:embed emojis.json
+// go:embed emojis.json
 var emojiJson []byte
 
 // Emojis Github emoji shortname to Unicode
