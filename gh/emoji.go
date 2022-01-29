@@ -1,7 +1,6 @@
 package gh
 
 import (
-	_ "embed"
 	"encoding/json"
 )
 
