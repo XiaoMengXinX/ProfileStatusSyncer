@@ -1,5 +1,8 @@
 # ProfileStatusSyncer
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/XiaoMengXinX/ProfileStatusSyncer)](https://goreportcard.com/report/github.com/XiaoMengXinX/ProfileStatusSyncer)
+
+
 A tool to synchronize user profile status of GitHub and Netease CloudMusic
 
 ## Features
