@@ -30,9 +30,9 @@ the [QuickLogin tool](https://github.com/XiaoMengXinX/Fuck163MusicTasks/releases
 
 2. Go to settings -> secrets -> Actions
 
-3. **Add a secret called `TOKEN` and set the value to your GitHub access token.**
+3. **Add a secret field `TOKEN` and set the value to your GitHub access token.**
 
-4. **Add a secret called `MUSIC_U` and set the value to your NeteaseCloud Music Cookie.**
+4. **Add a secret field `MUSIC_U` and set the value to your NeteaseCloud Music Cookie.**
 
 Then you can then run the action named syncer manually and check the output log to see if it works.
 
@@ -51,7 +51,7 @@ $ GITHUB_TOKEN=<your GitHub access token> MUSIC_U=<your NeteaseCloud Music Cooki
 
 ### Mode Configuration
 
-It is possible to run the tool in three modes:
+The tools can run in three modes:
 
 1. Set the environment variable `MODE` to `GitHub2Netease` to sync GitHun profile status to NeteaseCloud Music.
 
@@ -60,4 +60,4 @@ It is possible to run the tool in three modes:
 3. Set the environment variable `MODE` to `KeepNeteaseStatus` to maintain the profile status of NeteaseCloud Music.
 
 Notice that if you don't set the `MODE` variable, the tool will run in `GitHub2Netease` mode by default.And if you run
-it on GitHub Action, just add a secret called `MODE` and set its value.
+it on GitHub Action, just add a secret field called `MODE` and set its value.
